@@ -4,6 +4,7 @@ import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import osmos.commerce.sellerdelivery.dto.CSVModel;
 import osmos.commerce.sellerdelivery.dto.Item;
@@ -34,6 +35,7 @@ public class ConfigService {
     @Autowired
     private SellerRepository sellerRepository;
 
+    @Transactional
     public void uploadOrders(MultipartFile file) {
 
         if (file.isEmpty()) {
@@ -46,7 +48,7 @@ public class ConfigService {
                         .withIgnoreLeadingWhiteSpace(true)
                         .build();
                 List<CSVModel> csvModelList = csvToBean.parse();
-                Map<String, List<CSVModel>> sellerToOrder = csvModelList.stream().collect(Collectors.groupingBy(CSVModel::getSellerName));
+                Map<String, List<CSVModel>> sellerToOrder = csvModelList.stream().collect(Collectors.groupingBy(CSVModel::getStoreName));
                 saveIntoDB(sellerToOrder);
             } catch (IOException e) {
                 e.printStackTrace();

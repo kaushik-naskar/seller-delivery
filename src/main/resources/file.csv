@@ -1,0 +1,7 @@
+﻿storeName,storeLocality,storeAddress,srcLat,srcLong,paymentMode,customerName,customerMobile,destLat,destLong,customerAddress,customerLocality,customerPinCode,productName,description,quantity,price
+SOME STORE,Marathalli,"AJR Layout, Marathalli, Bangalore",21.10813,79.04153,PRE-PAID,Kaushik,8146178964,13.03577,77.597023,"Manyata Embassy Business Park, Outer Ring Road, Nagavara Bangalore ",Hebbal,560045,Coke,,1,45
+BOTTS STORE,Marathalli,"AJR Layout, Marathalli, Bangalore",21.10813,79.04153,PRE-PAID,Kaushik,8146178964,13.03577,77.597023,"Manyata Embassy Business Park, Outer Ring Road, Nagavara Bangalore ",Hebbal,560045,Lays,,2,30
+BOTTS STORE,Marathalli,"AJR Layout, Marathalli, Bangalore",21.10813,79.04153,PRE-PAID,Kaushik,8146178964,13.03577,77.597023,"Manyata Embassy Business Park, Outer Ring Road, Nagavara Bangalore ",Hebbal,560045,Cookie,,1,20
+BOTTS STORE,Marathalli,"AJR Layout, Marathalli, Bangalore",21.10813,79.04153,COD,Priyanka,9898989898,12.9814,77.7217,"Kadubeesanahalli, Kadabeesanahalli, Bengaluru, Karnataka 560103",Kadubeesanahalli,560037,Milk,,1,20
+BOTTS STORE,Marathalli,"AJR Layout, Marathalli, Bangalore",21.10813,79.04153,COD,Priyanka,9898989898,12.9814,77.7217,"Kadubeesanahalli, Kadabeesanahalli, Bengaluru, Karnataka 560104",Kadubeesanahalli,560038,Rice,,1,60
+SOME STORE,Bellandur,"Bellandur, Bangalore",21.10813,79.04153,COD,Kashish,8888888888,12.9256,77.6878,"rmz ecoworld,devarabisanahalli outer ring road",Bellandur,560103,Wheat,,1,75

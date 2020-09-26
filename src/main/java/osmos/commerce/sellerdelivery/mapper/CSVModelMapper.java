@@ -13,9 +13,9 @@ import java.util.List;
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.WARN)
 public interface CSVModelMapper {
 
-    @Mapping(source = "sellerName", target = "name")
-    @Mapping(source = "sellerLocality", target = "locality")
-    @Mapping(source = "sellerAddress", target = "address")
+    @Mapping(source = "storeName", target = "name")
+    @Mapping(source = "storeLocality", target = "locality")
+    @Mapping(source = "storeAddress", target = "address")
     @Mapping(source = "srcLat", target = "position.latitude")
     @Mapping(source = "srcLong", target = "position.longitude")
     SellerEntity mapToSellerEntity(CSVModel csvModel);
