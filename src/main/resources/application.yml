@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: seller-application
+  datasource:
+    username: admin
+    password: admin
+    url: jdbc:postgresql://localhost:5432/seller_application
+    continue-on-error: false
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 10000
+      max-lifetime: 30000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
