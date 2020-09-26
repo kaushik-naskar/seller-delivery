@@ -1,14 +1,15 @@
 package osmos.commerce.sellerdelivery.entity;
 
+import lombok.Data;
+import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import osmos.commerce.common.generic.JsonType;
+import osmos.commerce.sellerdelivery.dto.Position;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "seller")
 @TypeDef(name = "JsonType", typeClass = JsonType.class)
@@ -22,6 +23,11 @@ public class SellerEntity extends BaseEntity{
 
     private String address;
 
-    @OneToMany(mappedBy = "sellerId", fetch = FetchType.LAZY)
+    private String locality;
+
+    @Type(type = JSON_TYPE)
+    private Position position;
+
+    @OneToMany(mappedBy = "sellerId", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<OrderEntity> orders;
 }
